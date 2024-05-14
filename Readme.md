@@ -25,7 +25,7 @@
 ## 安装步骤
 
 1. **安装依赖**
-   - 需要安装Qt库用于图形界面开发（可选）。
+   - 安装wxWidgets库
    - 需要安装C++编译器（如g++）。
 
 2. **克隆仓库**
@@ -33,3 +33,8 @@
    git clone https://github.com/yourusername/warehouse_management_system.git
    cd warehouse_management_system
 
+3. **编译源代码**
+    ```sh
+    g++ -std=c++11 -o item_ui item_ui.cpp `wx-config --cxxflags --libs`
+    g++ -std=c++11 -o event_ui event_ui.cpp `wx-config --cxxflags --libs`
+    g++ -std=c++11 -o main main.cpp
